@@ -16,3 +16,24 @@ python get_activ_code.py
 Nessus 的激活码Activation code: 1E12-AB04-8DDB-564C-F119
 获取到nessus插件包的下载地址是: https://plugins.nessus.org/v2/nessus.php?f=all-2.0.tar.gz&u=501b33370d5649f73e029b246eedc3fe&p=1b1ec8c81448c67a986cd397232acb1b
 ```
+
+some tips
+
+```
+service nessusd stop
+# curl  https://www.tenable.com/downloads/api/v1/public/pages/nessus/downloads/10204/download?i_agree_to_tenable_license_agreement=true -o nessus880.deb
+# dpkg -i nessus880.deb
+# mv /opt/nessus/var/nessus/templates/metadata.json /opt/nessus/var/nessus/templates/metadata.json.old1
+# mv /opt/nessus/var/nessus/templates/tmp/metadata.json /opt/nessus/var/nessus/templates/tmp/metadata.json.old1
+
+/opt/nessus/sbin/nessuscli update  /root/all-2.0.tar.gz
+# just for first update all-2.0.tar.gz
+# cp /opt/nessus/var/nessus/www/policy_wizards.json /opt/nessus/var/nessus/www/policy_wizards.json.bak
+# sed -i '/subscription_only": true,/d' /opt/nessus/var/nessus/www/policy_wizards.json
+# sed -i '/"manager_only": true,/d' /opt/nessus/var/nessus/www/policy_wizards.json
+# sed -i 's/"HomeFeed (Non-commercial use only)"/"ProfessionalFeed (Direct)"/g' /opt/nessus/var/nessus/plugin_feed_info.inc
+# sed -i 's/"HomeFeed (Non-commercial use only)"/"ProfessionalFeed (Direct)"/g' /opt/nessus/lib/nessus/plugins/plugin_feed_info.inc
+# sed -i 's/Nessus Home/Nessus/g' /opt/nessus/lib/nessus/plugins/scan_info.nasl
+# cp /opt/nessus/etc/nessus/nessus-fetch.db.bak /opt/nessus/etc/nessus/nessus-fetch.db
+service nessusd start
+```
