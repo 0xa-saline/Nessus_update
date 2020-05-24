@@ -39,7 +39,7 @@ dpkg -i Nessus-8.5.1-ubuntu1110_amd64.deb
 
 点继续 Managed by 选择 Tenable.sc
 
-升级插件,可以在http://67.230.174.154/all-2.0.tar.gz下载
+升级插件,可以在[get_activ_code.py](https://github.com/0xa-saline/Nessus_update/blob/master/get_activ_code.py)获取下载
 
 ```
 /etc/init.d/nessusd stop
