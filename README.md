@@ -17,6 +17,8 @@ Nessus 的激活码Activation code: 1E12-AB04-8DDB-564C-F119
 获取到nessus插件包的下载地址是: https://plugins.nessus.org/v2/nessus.php?f=all-2.0.tar.gz&u=501b33370d5649f73e029b246eedc3fe&p=1b1ec8c81448c67a986cd397232acb1b
 ```
 
+关于Docker下运行的参考[Docker 下运行nessus](https://github.com/0xa-saline/Nessus_update/blob/master/Docker.md)
+
 some tips
 
 ```
