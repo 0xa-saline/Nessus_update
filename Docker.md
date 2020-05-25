@@ -36,12 +36,12 @@ dpkg -i Nessus-8.5.1-ubuntu1110_amd64.deb
 ```
 访问Nessus安装服务
 
-![image](https://user-images.githubusercontent.com/14137698/82769943-44b9bf80-9e69-11ea-805a-ab44e11e4ff3.png)
+![image](https://user-images.githubusercontent.com/14137698/82769941-41263880-9e69-11ea-88e4-9c59a6a4cd25.png)
+
 
 点继续 Managed by 选择 Tenable.sc
 
-
-![image](https://user-images.githubusercontent.com/14137698/82769950-48e5dd00-9e69-11ea-8169-cc68f9d52bf3.png)
+![image](https://user-images.githubusercontent.com/14137698/82769943-44b9bf80-9e69-11ea-805a-ab44e11e4ff3.png)
 
 升级插件,可以在[get_activ_code.py](https://github.com/0xa-saline/Nessus_update/blob/master/get_activ_code.py)获取下载
 
@@ -73,7 +73,7 @@ netstat -ntlp |grep 8834
 /etc/init.d/nessusd start
 ```
 
-![image](https://user-images.githubusercontent.com/14137698/82769941-41263880-9e69-11ea-88e4-9c59a6a4cd25.png)
+![image](https://user-images.githubusercontent.com/14137698/82769950-48e5dd00-9e69-11ea-8169-cc68f9d52bf3.png)
 
 修改密码
 
